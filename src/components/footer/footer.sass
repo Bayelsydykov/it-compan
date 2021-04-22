@@ -1,0 +1,61 @@
+footer
+	background: #F6F6F8
+	line-height: 22px
+	width: 100%
+	padding: 70px 20px 30px
+	text-align: center
+	
+	.container
+		margin: auto
+		margin-bottom: 30px
+		max-width: 1110px
+		display: grid
+		grid-template-columns: repeat(4,1fr)
+		box-sizing: border-box
+		.column
+			margin-bottom: 70px
+			text-align: left
+			h3
+				margin-bottom: 35px
+			nav
+				ul
+					li
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						align-items: center
+						&:not(:nth-child(1))
+							margin-top: 30px
+						a
+							margin-left: 15px
+						&:before
+							display: block
+							content: ''
+							width: 15px
+							height: 15px
+					li:nth-child(1):before
+						background: center no-repeat url('./img/mail.svg')
+					li:nth-child(2):before
+						background: center no-repeat url('./img/phone.svg')
+					li:nth-child(3):before
+						background: center no-repeat url('./img/placeholder.svg')
+
+			nav:not(.contact_info)
+				ul
+					li
+						a
+							margin-left: 10px
+					li:before
+						background: center url('./img/right-arrow.svg')
+						width: 10px
+						height: 10px
+@media screen and (max-width: 1200px)
+	footer
+		.container
+			grid-template-columns: 1fr 1fr
+@media screen and (max-width: 760px)
+	footer
+		.container
+			grid-template-columns: 1fr 
